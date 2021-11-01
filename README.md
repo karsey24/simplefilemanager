@@ -4,10 +4,15 @@ Allow a single user to upload files securely to a single directory on your serve
 ## Setup
 Clone or download this repository to the environment you intend to operate it in.  Search all files for any instance of `[[[`.  Anything inside three layers of square brackets must be replaced.
 
+
 `[[[HOMELINK]]]`  Replace every instance of this string with a link to the index.php file
+
 `[[[MANAGELINK]]]`  Replace every instance of this string with a link to manage.php
+
 `[[[mypass]]]`  Choose a password, and replace every instance of this string with the output of ```password_hash("PUT YOUR PASSWORD HERE", PASSWORD_DEFAULT);```
+
 `[[[PUBLICLINK]]]`  Assuming you want the uploaded file to be publicly accessible, replace every instance of this string with the base URL for the upload directory (ex. http://192.168.1.1/)
+
 
 Finally, it is assumed that uploaded files should go to the default HTML directory for Apache.  This is `/var/www/html`.  If you want a different directory, update delete.php and upload.php accordingly.
 
